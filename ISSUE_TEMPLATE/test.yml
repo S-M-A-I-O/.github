@@ -1,7 +1,0 @@
-name: Test template
-description: Simple test
-body:
-  - type: textarea
-    id: test
-    attributes:
-      label: Test
