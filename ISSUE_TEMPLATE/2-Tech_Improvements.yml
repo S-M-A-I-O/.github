@@ -1,0 +1,30 @@
+name: Task
+description: Technical task
+title: "[TASK] "
+labels: []
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the task
+      placeholder: Provide a detailed description of the task
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: List the steps to complete this task
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Step 3
+      value: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Step 3
+    validations:
+      required: true
