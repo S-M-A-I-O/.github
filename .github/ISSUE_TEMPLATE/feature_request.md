@@ -1,0 +1,37 @@
+---
+name: Feature request
+about: Suggest an idea for this project
+title: "[FEATURE] "
+labels: ''
+assignees: ''
+type: Feature
+
+---
+
+body:
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature
+      description: Describe the feature you want to develop
+      placeholder: Describe the feature in detail...
+    validations:
+      required: true
+
+  - type: input
+    id: requirement-document
+    attributes:
+      label: Requirement Document
+      description: Type of requirement document
+      placeholder: PRD, SRS, XXX, ...
+    validations:
+      required: false
+
+  - type: input
+    id: requirement-id
+    attributes:
+      label: Requirement ID
+      description: ID of the requirement
+      placeholder: PR XXX, SRS XXX, ...
+    validations:
+      required: false
