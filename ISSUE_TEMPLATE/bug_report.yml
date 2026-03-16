@@ -1,1 +1,115 @@
-test
+name: Bug report
+description: Report a bug
+title: "[BUG] "
+labels:
+  - bug
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Software Name and Version
+        Name of the software and version where the bug is detected
+        
+        e.g., KBA3D v2.1.0, KBOARD v2.1.0, ...
+
+  - type: input
+    id: software-version
+    attributes:
+      label: Software Name and Version
+      description: Name of the software and version where the bug is detected
+      placeholder: e.g., KBA3D v2.1.0, KBOARD v2.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: Date when the problem was found
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      description: Internal team or customer
+      options:
+        - Internal
+        - Customer
+    validations:
+      required: true
+
+  - type: input
+    id: nc-id
+    attributes:
+      label: NC ID
+      description: If available, ID of the non conformity
+      placeholder: NC ID
+    validations:
+      required: false
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Type of Issue
+      description: Type of issue (functional, UI, performance, etc.)
+      options:
+        - Functional
+        - UI
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: issue-type-other
+    attributes:
+      label: Other Issue Type
+      description: If you selected "Other", please specify
+      placeholder: Specify the issue type
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem Description
+      description: Describe the problem in detail
+      placeholder: |
+        - What happens
+        - What should happen
+        - Any additional context
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro-steps
+    attributes:
+      label: Reproduction Steps
+      description: Step by step instructions to reproduce the issue
+      placeholder: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: input
+    id: arb-id
+    attributes:
+      label: ARB ID
+      description: ARB identification number
+    validations:
+      required: false
+
+  - type: input
+    id: arb-decision
+    attributes:
+      label: ARB Decision
+      description: e.g., to be fixed in next version, not relevant, etc.
+      placeholder: to be fixed in next version, not relevant, ...
+    validations:
+      required: false
