@@ -30,7 +30,7 @@ body:
       description: Date à laquelle la demande a été formulée
       placeholder: YYYY-MM-DD
     validations:
-      required: true
+      required: false
 
   - type: input
     id: requester
