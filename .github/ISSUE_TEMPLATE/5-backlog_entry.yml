@@ -39,7 +39,7 @@ body:
       description: Personne à l'origine de la demande
       placeholder: Nom / équipe
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: comments
