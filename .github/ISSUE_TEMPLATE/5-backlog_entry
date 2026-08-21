@@ -1,0 +1,69 @@
+name: Backlog_entry
+description: Enregistrer une demande dans le backlog
+title: "[BACKLOG] "
+labels:
+  - backlog
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Nouvelle entrée de backlog
+        Utilisez ce formulaire pour enregistrer une demande. Le logiciel impacté peut rester vide s'il n'est pas encore connu — il sera précisé après analyse.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description de la demande
+      description: Décrivez la demande en détail
+      placeholder: |
+        - Ce qui est demandé
+        - Contexte / raison
+        - Bénéfice attendu
+    validations:
+      required: true
+
+  - type: input
+    id: request-date
+    attributes:
+      label: Date de demande
+      description: Date à laquelle la demande a été formulée
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+
+  - type: input
+    id: requester
+    attributes:
+      label: Responsable de la demande
+      description: Personne à l'origine de la demande
+      placeholder: Nom / équipe
+    validations:
+      required: true
+
+  - type: textarea
+    id: comments
+    attributes:
+      label: Commentaires
+      description: Informations complémentaires
+      placeholder: Commentaires libres
+    validations:
+      required: false
+
+  - type: input
+    id: impacted-software
+    attributes:
+      label: Logiciel impacté
+      description: Si connu (peut être laissé vide et complété après analyse)
+      placeholder: e.g., KBA3D, KBOARD
+    validations:
+      required: false
+
+  - type: input
+    id: target-release
+    attributes:
+      label: Date de sortie souhaitée
+      description: Trimestre visé
+      placeholder: e.g., Q1 2026, Q2 2026
+    validations:
+      required: false
